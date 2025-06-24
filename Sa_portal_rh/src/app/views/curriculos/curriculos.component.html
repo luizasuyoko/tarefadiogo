@@ -1,0 +1,17 @@
+
+
+<section class="listar-vagas">
+    <div *ngFor="let curriculo of curriculos">
+        
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Código do currículo: {{curriculo.id}}</h5>
+                <h5 class="card-text">nome: {{curriculo.nome}}</h5>
+                <h5 class="card-text">formacao: {{curriculo.formacao}}</h5>
+                <h5 class="card-text">experiência: {{curriculo.experiencia}}</h5>
+                <h5 class="card-text">telefone: {{curriculo.telefone}}</h5>
+                <h5 class="card-text">e-mail: {{curriculo.email}}</h5>
+            </div>
+        </div>
+    </div>
+</section>

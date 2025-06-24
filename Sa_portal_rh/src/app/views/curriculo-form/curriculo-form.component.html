@@ -1,0 +1,58 @@
+<h2>cadastrar</h2>
+
+<!-- formulario para mostrar vagas selecionadas -->
+<form action="">
+    <label for="">ID</label>
+    <input type="text" [(ngModel)]="curriculo.id" name="id"> <br>
+
+    <label for="">Nome</label>
+    <input type="text"  [(ngModel)]="curriculo.nome" name="nome"> <br>
+
+    <label for="">Formacao</label>
+    <input type="text" [(ngModel)]="curriculo.formacao" name="formacao"> <br>
+
+    <label for="">Experiencia</label>
+    <input type="text"  [(ngModel)]="curriculo.experiencia" name="experiencia"> <br>
+
+    <label for="">Telefone</label>
+    <input type="text" [(ngModel)]="curriculo.telefone" name="telefone"> <br>
+
+    <label for="">E-mail</label>
+    <input type="text" [(ngModel)]="curriculo.email" name="email"> <br>
+
+    <button type="button" (click)="cadastrarCurriculo()">Cadastrar Vaga</button>
+    <button type="button" (click)="atualizarCurriculo(curriculo.id)">Atualizar Vaga</button>
+    <button type="button" (click)="excluirCurriculo(curriculo.id)">Excluir Vaga</button>
+</form>
+
+<!-- tabela com as vagas ja cadastradas -->
+ <section class="listar-vagas">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Código do Curriculo</th>
+                <th>Nome</th>
+                <th>Formação</th>
+                <th>Experiência</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="curriculo-row" *ngFor="let curriculo of curriculos">
+                <td>{{curriculo.id}}</td>
+                <td>{{curriculo.nome}}</td>
+                <td>{{curriculo.formacao}}</td>
+                <td>{{curriculo.experiencia}}</td>
+                <td>{{curriculo.telefone}}</td>
+                <td>{{curriculo.email}}</td>
+
+                <td>
+                    <button class="btn-listar" type="button" (click)="listarCurriculoPorId(curriculo)">Listar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+ </section>
+
+ <div class="rodape"></div>

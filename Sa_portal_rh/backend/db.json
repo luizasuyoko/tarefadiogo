@@ -1,0 +1,74 @@
+{
+  "vagas": [
+    {
+      "id": "1",
+      "nome": "Desenvolver FrontEnd Jr",
+      "foto": "foto1.jpg",
+      "descricao": "Trabalhar com HTML, CSS e JS",
+      "salario": 4000
+    },
+    {
+      "id": "2",
+      "nome": "Desenvolver BackEnd Pleno",
+      "foto": "foto2.jpg",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 7000
+    },
+    {
+      "id": "3",
+      "nome": "Desenvolver Fullstack Senior",
+      "foto": "foto3.jpg",
+      "descricao": "Trabalhar com Desenvolvimento Web",
+      "salario": 10000
+    },
+    {
+      "id": "4",
+      "nome": "Desenvolver Fullstack Senior",
+      "foto": "foto4.jpg",
+      "descricao": "Trabalhar com Desenvolvimento Mobile",
+      "salario": 15000
+    }
+  ],
+  "curriculos": [
+    {
+      "id": "1",
+      "nome": "João Silva",
+      "formacao": "Engenharia de Software",
+      "experiencia": "3 anos em desenvolvimento web",
+      "telefone": "11999999999",
+      "email": "joaos@email.com"
+    },
+    {
+      "id": "2",
+      "nome": "Maria Oliveira",
+      "formacao": "Ciências da Computação",
+      "experiencia": "2 anos em desenvolvimento mobile",
+      "telefone": "119999999998",
+      "email": "mariao@email.com"
+    },
+    {
+      "id": "3",
+      "nome": "Pedro Santos",
+      "formacao": "Análise e Desenvolvimento de Sistemas",
+      "experiencia": "1 ano em desenvolvimento front-end",
+      "telefone": "11999999997",
+      "email": "pedros@email.com"
+    },
+    {
+      "id": "023",
+      "nome": "aa",
+      "formacao": "a",
+      "experiencia": "aa",
+      "telefone": "a",
+      "email": "a"
+    },
+    {
+      "id": "4",
+      "nome": "luiza suemi",
+      "formacao": "nada",
+      "experiencia": "nada",
+      "telefone": "19191822893",
+      "email": "luizasuemiyokomizo@outlook.com"
+    }
+  ]
+}

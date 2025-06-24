@@ -1,0 +1,20 @@
+<h2>Buscar por Id</h2>
+<input
+  type="number"
+  [(ngModel)]="termoBusca"
+  placeholder="Buscar currículo por ID"
+  style="max-width: 300px; margin-bottom: 16px;"
+/>
+<button (click)="buscar()" class="btn btn-primary" style="margin-left: 8px;">Buscar</button>
+
+
+<div *ngIf="resultados.length > 0">
+  <h4>Resultado{{ resultados.length > 1 ? 's' : '' }}:</h4>
+  <div *ngFor="let curriculo of resultados" class="resultado">
+    <p><strong>ID:</strong> {{ curriculo.id }}</p>
+    <p><strong>Nome:</strong> {{ curriculo.nome }}</p>
+    <p><strong>Formação:</strong> {{ curriculo.formacao }}</p>
+    <p><strong>Experiência:</strong> {{ curriculo.experiencia }}</p>
+    <hr />
+  </div>
+</div>
