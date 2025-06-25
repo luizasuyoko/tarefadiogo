@@ -1,6 +1,6 @@
-import 'package:sa_negocios/models/produto_model.dart';
-import 'package:sqflite/sqflite.dart';
+import 'package:sa_pequenos_negocios2/models/produto_model.dart';
 import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 class DbHelper {
   static Database? _database;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sa_negocios/controllers/produto_controller.dart';
-import 'package:sa_negocios/models/produto_model.dart';
-import 'package:sa_negocios/views/produto_cadastro.dart';
+import 'package:sa_pequenos_negocios2/controllers/produto_controller.dart';
+import 'package:sa_pequenos_negocios2/models/produto_model.dart';
+import 'package:sa_pequenos_negocios2/views/Produto_cadastro.dart';
 
-class HomeScreen extends StatefulWidget{
+class HomeScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _HomeScreenState();
 }
@@ -11,8 +11,6 @@ class _HomeScreenState extends State<HomeScreen> {
   final _ProdutoController = ProdutoController();
   List<Produto> _produtos = [];
   bool _isLoading = true;
-
-  final TextEditingController _nomeController = TextEditingController();
 
   @override
   void initState() {
@@ -35,22 +33,6 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  Future<void> _adicionarProduto() async {
-    if (_nomeController.text.isEmpty) return;
-    // Crie um Produto com valores padrão para os outros campos
-    Produto novoProduto = Produto(
-      id: 0, // ou null, dependendo do tipo e da lógica do seu modelo
-      nome: _nomeController.text,
-      descricao: '', // ou forneça uma descrição padrão
-      precoCusto: 0,
-      precoVenda: 0,
-      quantidade: 0,
-    );
-    await _ProdutoController.createProduto(novoProduto);
-    _nomeController.clear();
-    _carregarDados();
-  }
-
   //buildar a tela
   @override
   Widget build(BuildContext context) {
@@ -70,7 +52,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     final produto = _produtos[index];
                     return ListTile(
                       title: Text(produto.nome),
-                      subtitle: Text("ID: ${produto.id}"),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("ID: ${produto.id}"),
+                          Text("Descrição: ${produto.descricao}"),
+                          Text("Preço de Custo: ${produto.precoCusto}"),
+                          Text("Preço de Venda: ${produto.precoVenda}"),
+                          Text("Quantidade: ${produto.quantidade}"),
+                        ],
+                      ),
                     );
                   }
                 ),
@@ -78,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Align(
           alignment: Alignment.bottomCenter,
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(15, 15, 15, 500),
+            padding: const EdgeInsets.fromLTRB(15, 15, 15, 50),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [

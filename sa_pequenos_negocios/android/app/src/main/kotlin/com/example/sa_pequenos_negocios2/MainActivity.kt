@@ -1,4 +1,4 @@
-package com.example.sa_negocios
+package com.example.sa_pequenos_negocios2
 
 import io.flutter.embedding.android.FlutterActivity
 

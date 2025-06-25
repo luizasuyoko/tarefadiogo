@@ -1,5 +1,5 @@
-import 'package:sa_negocios/models/produto_model.dart';
-import 'package:sa_negocios/services/db_helper.dart';
+import 'package:sa_pequenos_negocios2/models/produto_model.dart';
+import 'package:sa_pequenos_negocios2/services/db_helper.dart';
 
 class ProdutoController {
   final DbHelper _dbHelper = DbHelper();

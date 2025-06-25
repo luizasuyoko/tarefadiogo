@@ -38,4 +38,15 @@ class Produto{
       descricao: map['descricao']
     );
   }
+
+  Produto copyWith({required int id}) {
+    return Produto(
+      id: id,
+      nome: this.nome,
+      precoVenda: this.precoVenda,
+      precoCusto: this.precoCusto,
+      quantidade: this.quantidade,
+      descricao: this.descricao,
+    );
+  }
 }

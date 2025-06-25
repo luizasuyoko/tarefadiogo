@@ -1,15 +1,14 @@
-name: sa_negocios
+name: sa_pequenos_negocios2
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ^3.8.0
+  sdk: ^3.8.1
 
 dependencies:
   flutter:
     sdk: flutter
-  path: ^1.9.1
   sqflite: ^2.4.2
 
 dev_dependencies:
